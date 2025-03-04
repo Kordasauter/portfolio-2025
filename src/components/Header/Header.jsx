@@ -7,8 +7,8 @@ function Header(props) {
 	return (
 		<header>
 			<div className='titre'>
-				<h1>MICKAEL VIVENS</h1>
-				<h2>DEVELOPPEUR WEB</h2>
+				<h2>MICKAEL VIVENS</h2>
+				{/* <h2>DEVELOPPEUR WEB</h2> */}
 			</div>
 
 			<Nav />
