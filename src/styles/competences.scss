@@ -22,8 +22,31 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-		h3 {
-			color: variables.$primary-color;
+		// max-width: 50vw;
+		padding-left: 25vw;
+		padding-right: 25vw;
+		.categorie {
+			// width: 10vw;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				list-style-type: none;
+				padding: 0;
+				li {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 15px;
+					h3 {
+						color: variables.$primary-color;
+					}
+					img {
+						max-width: 2.5em;
+					}
+				}
+			}
 		}
 	}
 }

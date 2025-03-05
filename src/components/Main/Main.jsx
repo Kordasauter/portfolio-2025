@@ -2,8 +2,9 @@ import React from 'react'
 
 import Accueil from '../../pages/Accueil'
 import Competences from '../../pages/Competences'
-import Experiences from '../../pages/Experiences'
+// import Experiences from '../../pages/Experiences'
 import Projets from '../../pages/Projets'
+import Contact from '../../pages/Contact'
 
 import '../../styles/main.scss'
 function Main({ children }) {
@@ -12,8 +13,9 @@ function Main({ children }) {
 			{/* <div className='mainChild'>{children}</div> */}
 			<Accueil />
 			<Competences />
-			<Experiences />
+			{/* <Experiences /> */}
 			<Projets />
+			<Contact />
 		</main>
 	)
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 
 import '../styles/competences.scss'
+
+import comp from '../datas/competences.json'
 function Competences(props) {
 	return (
 		<section id='competences'>
@@ -18,32 +20,17 @@ function Competences(props) {
 			</div>
 
 			<div className='competences'>
-				<div>
+				<div className='categorie'>
 					<h3 className='frontEnd'>Front End</h3>
-					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-					</ul>
+					<ul>{createList(comp, 'front')}</ul>
 				</div>
-				<div>
+				<div className='categorie'>
 					<h3 className='backEnd'>Back End</h3>
-					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-					</ul>
+					<ul>{createList(comp, 'back')}</ul>
 				</div>
-				<div>
+				<div className='categorie'>
 					<h3 className='bdd'>Base De Données</h3>
-					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-					</ul>
+					<ul>{createList(comp, 'bdd')}</ul>
 				</div>
 			</div>
 		</section>
@@ -51,3 +38,12 @@ function Competences(props) {
 }
 
 export default Competences
+
+function createList(data, type) {
+	return data[type]?.map((c, index) => (
+		<li key={type + index}>
+			<img src={'./images/logos/' + c.name + '.png'} alt={c.name} />
+			{c.name}
+		</li>
+	))
+}

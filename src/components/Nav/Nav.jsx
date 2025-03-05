@@ -25,7 +25,7 @@ function Nav(props) {
 						Compétences
 					</a>
 				</li>
-				<li>
+				{/* <li>
 					<a
 						// className={
 						// 	pathname === '/experiences' ? 'active' : 'notActive'
@@ -35,7 +35,7 @@ function Nav(props) {
 					>
 						Expériences
 					</a>
-				</li>
+				</li> */}
 				<li>
 					<a
 						// className={
@@ -45,6 +45,17 @@ function Nav(props) {
 						href='./#projets'
 					>
 						Projets
+					</a>
+				</li>
+				<li>
+					<a
+						// className={
+						// 	pathname === '/contact' ? 'active' : 'notActive'
+						// }
+						className='notActive'
+						href='./#contact'
+					>
+						Contact
 					</a>
 				</li>
 			</ul>

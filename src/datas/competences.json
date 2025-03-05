@@ -1,0 +1,46 @@
+{
+	"front": [
+		{
+			"name": "HTML5",
+			"image": "HTML5"
+		},
+		{
+			"name": "CSS3",
+			"image": "CSS3"
+		},
+		{
+			"name": "JavaScript",
+			"image": "JavaScript"
+		},
+		{
+			"name": "TypeScript",
+			"image": "TypeScript"
+		},
+		{
+			"name": "ReactJS",
+			"image": "ReactJS"
+		},
+		{
+			"name": "Angular",
+			"image": "Angular"
+		}
+	],
+	"back": [
+		{
+			"name": "NodeJS",
+			"image": "NodeJS"
+		},
+		{
+			"name": "PHP",
+			"image": "PHP"
+		},
+		{
+			"name": "MongoDB",
+			"image": "MongoDB"
+		},
+		{
+			"name": "SQL",
+			"image": "SQL"
+		}
+	]
+}

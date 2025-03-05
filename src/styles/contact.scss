@@ -1,0 +1,11 @@
+#contact {
+	position: relative;
+	z-index: 0;
+	background-color: #f6f6f6;
+	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
+	.contact {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}

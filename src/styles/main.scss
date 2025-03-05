@@ -8,9 +8,10 @@ main {
 	margin-top: 100px;
 
 	section {
+		scroll-snap-stop: always;
 		scroll-snap-align: end;
 
-		height: calc(100vh - 100px);
+		min-height: calc(100vh - 100px);
 		@include mixins.shadowBox;
 		// scroll-margin: 100px;
 	}
