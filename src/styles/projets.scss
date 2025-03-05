@@ -1,0 +1,17 @@
+#projets {
+	position: relative;
+	z-index: 0;
+	// padding-top: 50px;
+	background-color: #f6f6f6;
+	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
+	// h2 {
+	// 	margin: 0;
+	// 	padding-top: 0.83em;
+	// 	padding-bottom: 0.83em;
+	// }
+	.projets {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}

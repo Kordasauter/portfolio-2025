@@ -1,48 +1,52 @@
-@import './utils/mixins';
-@import './utils/variables';
-.accueil {
-	// min-height: 980px;
-	// max-width: 1440px;
-	height: calc(100vh - 100px);
+@use 'utils/mixins';
+@use 'utils/variables';
+#accueil {
+	position: relative;
+	z-index: 3;
 
-	// border-radius: $common-radius;
-
-	// background-color: $main-background-color;
-	// background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
 	background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
-	@include shadowBox;
 
-	color: $main-font-color;
-	// position: absolute;
-	// top: 50%;
-	// left: 50%;
-	// transform: translate(-50%, -50%);
+	color: variables.$main-font-color;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	.description {
+	flex-direction: column;
+	// justify-content: space-around;
+	align-items: center;
+	// max-width: 50%;
+	// margin: auto 0;
+	.accueil {
+		display: flex;
+		flex-direction: column;
+		gap: 2.2em;
 		max-width: 50%;
 		margin: auto 0;
-		h1 {
-			text-transform: uppercase;
+		.description {
+			h1 {
+				text-transform: uppercase;
+				text-align: center;
+			}
+			p {
+				text-align: center;
+			}
+		}
+		.cvBouton {
+			border-radius: 1em;
+			font-weight: 500;
+			color: white;
+			background-color: variables.$primary-color;
+			margin: auto;
+			padding: 10px 20px;
 			text-align: center;
 		}
-		// h3 {
-		// 	font-size: 6rem;
+		.cvBouton:hover {
+			cursor: pointer;
+		}
+		.cvBouton:active {
+			background-color: variables.$secondary-color;
+		}
+		// img {
+		// 	border-radius: $common-radius;
+		// 	width: 250px;
+		// 	box-shadow: 0px 10px 30px $main-shadow-color;
 		// }
-		p {
-			// font-size: 2.2rem;
-			text-align: center;
-			// font-weight: bold;
-			// border-left: 3px solid $main-font-color;
-			// padding: 0 20px;
-		}
-	}
-	img {
-		border-radius: $common-radius;
-		// border: 2px solid $main-font-color;
-		width: 250px;
-
-		box-shadow: 0px 10px 30px $main-shadow-color;
 	}
 }

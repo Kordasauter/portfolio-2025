@@ -1,0 +1,29 @@
+@use 'utils/mixins';
+@use 'utils/variables';
+#competences {
+	position: relative;
+	z-index: 2;
+	// height: calc(100vh - 100px);
+	background-color: #f6f6f6;
+	background-image: url('https://www.transparenttextures.com/patterns/pineapple-cut.png');
+	.description {
+		display: flex;
+		flex-direction: column;
+		max-width: 50%;
+		margin: 0 auto;
+		h2 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+	}
+	.competences {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		h3 {
+			color: variables.$primary-color;
+		}
+	}
+}
