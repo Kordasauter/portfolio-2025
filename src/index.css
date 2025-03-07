@@ -1,7 +1,4 @@
 html {
-	scroll-snap-type: y mandatory;
-
-	/* scroll-snap-type: y; */
 	scroll-behavior: smooth;
 }
 body {
@@ -11,9 +8,7 @@ body {
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/* font-size: 65%; */
 }
-
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;

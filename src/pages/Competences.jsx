@@ -5,7 +5,7 @@ import '../styles/competences.scss'
 import comp from '../datas/competences.json'
 function Competences(props) {
 	return (
-		<section id='competences'>
+		<section id='competencesSection' className='section'>
 			<div className='description'>
 				<h2>Compétences</h2>
 				<p>

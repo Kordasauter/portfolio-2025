@@ -4,7 +4,7 @@ import '../styles/projets.scss'
 
 function Projets(props) {
 	return (
-		<section id='projets'>
+		<section id='projetsSection' className='section'>
 			<div className='projets'>
 				<h2>Projets</h2>
 			</div>

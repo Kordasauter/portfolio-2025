@@ -4,7 +4,8 @@ import '../styles/contact.scss'
 
 function Contact(props) {
 	return (
-		<section id='contact'>
+		<section id='contactSection' className='lastSection'>
+			{/* <span class='anchor' id='contact' /> */}
 			<div className='contact'>
 				<h2>Contact</h2>
 			</div>

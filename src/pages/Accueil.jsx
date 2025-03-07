@@ -4,7 +4,7 @@ import '../styles/accueil.scss'
 
 function Accueil(props) {
 	return (
-		<section id='accueil'>
+		<section id='accueilSection' className='section'>
 			<div className='accueil'>
 				<div className='description'>
 					<h1>développeur web</h1>
@@ -19,10 +19,6 @@ function Accueil(props) {
 				</div>
 				<div className='cvBouton'>Téléchargez mon CV</div>
 			</div>
-
-			{/* <div className='photo'>
-				<img src='./images/photos/photo3.png' alt='moi' />
-			</div> */}
 		</section>
 	)
 }

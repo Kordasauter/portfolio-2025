@@ -10,11 +10,13 @@ import '../../styles/main.scss'
 function Main({ children }) {
 	return (
 		<main>
-			{/* <div className='mainChild'>{children}</div> */}
+			<span id='accueil' className='anchor' />
 			<Accueil />
+			<span id='competences' className='anchor' />
 			<Competences />
-			{/* <Experiences /> */}
+			<span id='projets' className='anchor' />
 			<Projets />
+			<span id='contact' className='anchor' />
 			<Contact />
 		</main>
 	)

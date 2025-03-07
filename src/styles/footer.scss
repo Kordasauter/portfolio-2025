@@ -1,27 +1,27 @@
 footer {
-	scroll-snap-align: end;
-	// position: fixed;
-	// bottom: 0;
-	height: 200px;
-	width: 100%;
-	color: white;
-	background-color: black;
-
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-	justify-content: center;
-	align-items: center;
-	.nom {
-		padding-right: 20px;
-		border-right: 1px white solid;
-	}
-	.reseaux {
+	position: sticky;
+	top: calc(100vh - 200px);
+	#footer {
+		height: 200px;
+		width: 100%;
+		color: white;
+		background-color: black;
 		display: flex;
 		flex-direction: row;
 		gap: 20px;
-	}
-	a {
-		color: white;
+		justify-content: center;
+		align-items: center;
+		.nom {
+			padding-right: 20px;
+			border-right: 1px white solid;
+		}
+		.reseaux {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+		}
+		a {
+			color: white;
+		}
 	}
 }

@@ -1,17 +1,14 @@
 @use 'utils/mixins';
 @use 'utils/variables';
 header {
-	padding-left: 50px;
-	padding-right: 50px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-
 	position: fixed;
 	top: 0;
 	z-index: 4;
-	height: 100px;
-	width: calc(100vw - 100px);
+	height: variables.$header-size;
+	width: 100%;
 
 	background-color: #d5e6ff;
 	@include mixins.shadowBox;
@@ -19,23 +16,17 @@ header {
 	color: variables.$main-font-color;
 	background-color: #d5e6ff;
 	background-image: url('https://kordasauter.github.io/Kasa/static/media/homeBanner.7360a5225c491626c951.jpg');
-
 	.titre {
+		padding-left: 50px;
 		display: flex;
 		justify-content: space-around;
 		gap: 20px;
-		// H1 {
-		// 	// font-size: 40px;
-
-		// 	margin: auto 0;
-		// }
-		H2 {
-			// font-size: 35px;
-			// color: $primary-color;
+		h2 {
 			margin: auto 0;
 		}
 	}
 	nav {
+		padding-right: 50px;
 		margin: auto 0;
 		font-weight: bold;
 	}
@@ -49,11 +40,6 @@ header {
 		li {
 			a {
 				color: variables.$main-font-color;
-
-				// color: $primary-color;
-				// 	// font-size: 20px;
-				// 	// font-weight: bold;
-				// 	// margin: auto 0;
 			}
 			.active {
 				text-decoration: underline;

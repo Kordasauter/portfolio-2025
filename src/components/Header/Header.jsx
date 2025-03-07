@@ -8,7 +8,7 @@ function Header(props) {
 		<header>
 			<div className='titre'>
 				<h2>MICKAEL VIVENS</h2>
-				{/* <h2>DEVELOPPEUR WEB</h2> */}
+				<h2>DEVELOPPEUR WEB</h2>
 			</div>
 
 			<Nav />
