@@ -6,6 +6,8 @@ import Competences from '../../pages/Competences'
 import Projets from '../../pages/Projets'
 import Contact from '../../pages/Contact'
 
+import Footer from '../Footer/Footer'
+
 import '../../styles/main.scss'
 function Main({ children }) {
 	return (
@@ -18,6 +20,7 @@ function Main({ children }) {
 			<Projets />
 			<span id='contact' className='anchor' />
 			<Contact />
+			<Footer />
 		</main>
 	)
 }

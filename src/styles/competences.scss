@@ -1,6 +1,8 @@
 @use 'utils/mixins';
 @use 'utils/variables';
 #competencesSection {
+	@include mixins.section();
+
 	background-color: #f6f6f6;
 	background-image: url('https://www.transparenttextures.com/patterns/pineapple-cut.png');
 	.description {

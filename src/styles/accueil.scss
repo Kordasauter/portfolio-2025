@@ -1,6 +1,7 @@
 @use 'utils/mixins';
 @use 'utils/variables';
 #accueilSection {
+	@include mixins.section();
 	background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
 
 	color: variables.$main-font-color;
@@ -39,3 +40,6 @@
 		}
 	}
 }
+// .section {
+
+// }

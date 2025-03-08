@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-import Footer from './components/Footer/Footer'
+// import Footer from './components/Footer/Footer'
 
 import reportWebVitals from './reportWebVitals'
 
@@ -13,7 +13,7 @@ root.render(
 	<React.StrictMode>
 		<Header />
 		<Main />
-		<Footer />
+		{/* <Footer /> */}
 	</React.StrictMode>
 )
 

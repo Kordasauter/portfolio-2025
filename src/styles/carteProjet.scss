@@ -1,0 +1,32 @@
+.carte {
+	// min-width: 500px;
+	// max-width: 500px;
+	// width: 500px;
+	background-color: lightgray;
+	border-radius: 15px;
+	// width: 80%;
+	width: calc(25%);
+	height: fit-content;
+	.image {
+		// width: 100%;
+		// width: calc(25vw - 16px);
+		margin: 8px;
+		padding: 8px;
+		border-radius: 7px;
+		aspect-ratio: 16/9;
+		background-color: gray;
+		text-align: center;
+	}
+	.descTexte {
+		// width: 100%;
+		// width: calc(25vw - 16px);
+		margin: 8px;
+		padding: 8px;
+		border-radius: 7px;
+		background-color: white;
+	}
+}
+.carteVide {
+	width: calc(25%);
+	// height: fit-content;
+}
