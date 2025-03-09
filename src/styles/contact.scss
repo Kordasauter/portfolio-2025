@@ -1,9 +1,23 @@
+@use 'utils/mixins';
+@use 'utils/variables';
 #contactSection {
 	background-color: #f6f6f6;
 	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
 	.contact {
+		height: 100%;
 		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		.contactForm {
+			width: 30%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border: 2px solid variables.$primary-color;
+			border-radius: 25px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 }

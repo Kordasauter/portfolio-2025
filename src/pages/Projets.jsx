@@ -1,34 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import CarteProjet from '../components/CarteProjet/CarteProjet'
+
+import arrow from '../assets/left-arrow.svg'
 
 import '../styles/projets.scss'
 
 function Projets(props) {
-	const [listeAffichage, setlisteAffichage] = useState([-1, 0, 1, 2, 3])
+	const [projetCentral, setProjetCentral] = useState(0)
+	const ref = useRef()
 
 	const handleClickForward = () => {
-		if (listeAffichage[3] < listeProjets.length - 1)
-			setlisteAffichage([
-				listeAffichage[0] + 1,
-				listeAffichage[1] + 1,
-				listeAffichage[2] + 1,
-				listeAffichage[3] + 1,
-				listeAffichage[4] + 1,
-			])
-		// console.log(listeAffichage)
+		if (projetCentral < listeProjets.length - 1)
+			setProjetCentral(projetCentral + 1)
 	}
+
 	const handleClickBackward = () => {
-		if (listeAffichage[1] > 0)
-			setlisteAffichage([
-				listeAffichage[0] - 1,
-				listeAffichage[1] - 1,
-				listeAffichage[2] - 1,
-				listeAffichage[3] - 1,
-				listeAffichage[4] - 1,
-			])
-		// console.log(listeAffichage)
+		if (projetCentral > 0) setProjetCentral(projetCentral - 1)
 	}
+
+	useEffect(() => {
+		ref.current.style.left = 45 - (30 + 2) * projetCentral + 'rem'
+		// console.log(projetCentral)
+	}, [projetCentral])
+
 	const texte =
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non	risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
 
@@ -47,44 +42,24 @@ function Projets(props) {
 		<section id='projetsSection' className='section'>
 			<div className='projets'>
 				<h2>Projets</h2>
-				<div className='cardContainer'>
-					{listeAffichage[0] >= 0 ? (
+				<div className='button btnLeft' onClick={handleClickBackward}>
+					<img src={arrow} alt='left arrow' />
+				</div>
+				<div className='button btnRight' onClick={handleClickForward}>
+					<img src={arrow} alt='left arrow' />
+				</div>
+				<div className='cardContainer' ref={ref}>
+					{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
+					{listeProjets.map((projet, index) => (
 						<CarteProjet
-							imageURL={listeProjets[listeAffichage[0]].url}
+							imageURL={projet.url}
 							display={true}
-							texte={listeProjets[listeAffichage[0]].texte}
+							texte={projet.texte}
+							selected={projetCentral === index}
+							key={'projet' + index}
 						/>
-					) : (
-						<CarteProjet imageURL={''} display={false} texte={''} />
-					)}
-
-					<CarteProjet
-						imageURL={listeProjets[listeAffichage[1]].url}
-						display={true}
-						texte={listeProjets[listeAffichage[1]].texte}
-					/>
-
-					<CarteProjet
-						imageURL={listeProjets[listeAffichage[2]].url}
-						display={true}
-						texte={listeProjets[listeAffichage[2]].texte}
-					/>
-
-					<CarteProjet
-						imageURL={listeProjets[listeAffichage[3]].url}
-						display={true}
-						texte={listeProjets[listeAffichage[3]].texte}
-					/>
-
-					{listeAffichage[4] < listeProjets.length ? (
-						<CarteProjet
-							imageURL={listeProjets[listeAffichage[4]].url}
-							display={true}
-							texte={listeProjets[listeAffichage[4]].texte}
-						/>
-					) : (
-						<CarteProjet imageURL={''} display={false} texte={''} />
-					)}
+					))}
+					{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
 				</div>
 			</div>
 		</section>

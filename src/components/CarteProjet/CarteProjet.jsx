@@ -3,16 +3,18 @@ import React from 'react'
 import '../../styles/carteProjet.scss'
 
 function CarteProjet(props) {
+	if (props.selected) console.log(props.imageURL)
 	return (
-		<div className={props.display === true ? 'carte ' : 'carteVide'}>
+		<div
+			className={
+				'carte ' + (props.selected ? 'selected' : 'notSelected')
+				// props.display
+				// 	? 'carte ' + props.className
+				// 	: 'carteVide ' + props.className
+			}
+		>
 			{props.display === true ? afficherImage(props.imageURL) : null}
 			{props.display === true ? afficherTexte(props.texte) : null}
-			{/* <div className='image'>{props.imageURL}</div> */}
-			{/* <div className='descTexte'>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-				risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
-				nec, ultricies sed, dolor.
-			</div> */}
 		</div>
 	)
 }

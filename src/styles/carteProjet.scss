@@ -1,15 +1,17 @@
+.selected {
+	transform: scale(1.1);
+}
+
+.notSelected {
+	transform: scale(1);
+}
 .carte {
-	// min-width: 500px;
-	// max-width: 500px;
-	// width: 500px;
 	background-color: lightgray;
 	border-radius: 15px;
-	// width: 80%;
-	width: calc(25%);
+	width: calc(30rem);
 	height: fit-content;
+	transition: 0.5s ease-in-out;
 	.image {
-		// width: 100%;
-		// width: calc(25vw - 16px);
 		margin: 8px;
 		padding: 8px;
 		border-radius: 7px;
@@ -18,15 +20,13 @@
 		text-align: center;
 	}
 	.descTexte {
-		// width: 100%;
-		// width: calc(25vw - 16px);
 		margin: 8px;
 		padding: 8px;
 		border-radius: 7px;
 		background-color: white;
 	}
 }
+
 .carteVide {
-	width: calc(25%);
-	// height: fit-content;
+	width: calc(30rem);
 }
