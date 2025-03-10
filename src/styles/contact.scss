@@ -1,23 +1,119 @@
 @use 'utils/mixins';
 @use 'utils/variables';
+// #contactSection {
+// 	@include mixins.section();
+// 	background-color: #f6f6f6;
+// 	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
+// 	.contact {
+// 		height: 100%;
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		.contactForm {
+// 			width: 30%;
+// 			padding-top: 20px;
+// 			padding-bottom: 20px;
+// 			border: 2px solid variables.$primary-color;
+// 			border-radius: 25px;
+// 			display: flex;
+// 			flex-direction: column;
+// 			align-items: center;
+// 		}
+// 	}
+// }
+
 #contactSection {
+	@include mixins.section();
+	height: 100%;
+	width: 100%;
+	// z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: space-around;
+	justify-content: space-between;
+	gap: 20px;
+	// background-color: $background-color;
+
+	// background-image: url('https://www.transparenttextures.com/patterns/clean-textile.png');
 	background-color: #f6f6f6;
 	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
-	.contact {
-		height: 100%;
+	box-shadow: lightgray 4px 4px 20px;
+
+	// padding-top: 25px;
+	// padding-bottom: 35px;
+	padding-bottom: 0;
+
+	input[type='text'],
+	input[type='email'],
+	textarea,
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+	}
+	h2 {
+		// font-size: 34px;
+		font-weight: bold;
+		color: variables.$primary-color;
+		text-align: center;
+	}
+	textarea {
+		height: 150px;
+	}
+	input[type='submit'] {
+		width: 100%;
+		background-color: variables.$primary-color;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	input[type='submit']:hover {
+		background-color: variables.$primary-color;
+	}
+
+	.nameMail {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+	}
+	.smallInput {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		.contactForm {
-			width: 30%;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			border: 2px solid variables.$primary-color;
-			border-radius: 25px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
 	}
+	.mailStatus {
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		min-width: 25%;
+		padding: 15px;
+		border-radius: 10px;
+		background-color: #f6f6f6;
+		box-shadow: lightgray 4px 4px 20px;
+	}
+	.placeHolder {
+		height: variables.$footer-size;
+	}
+}
+.invisible {
+	display: none;
+}
+.success {
+	color: green;
+}
+.fail {
+	color: red;
 }

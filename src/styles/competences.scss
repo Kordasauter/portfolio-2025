@@ -5,14 +5,20 @@
 
 	background-color: #f6f6f6;
 	background-image: url('https://www.transparenttextures.com/patterns/pineapple-cut.png');
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: space-around;
+	justify-content: space-between;
+	h2 {
+		text-align: center;
+	}
 	.description {
 		display: flex;
 		flex-direction: column;
 		max-width: 50%;
 		margin: 0 auto;
-		h2 {
-			text-align: center;
-		}
+
 		p {
 			text-align: center;
 		}
@@ -23,6 +29,10 @@
 		justify-content: space-around;
 		padding-left: 25vw;
 		padding-right: 25vw;
+		p {
+			max-width: 50%;
+			text-align: center;
+		}
 		.categorie {
 			ul {
 				display: flex;
