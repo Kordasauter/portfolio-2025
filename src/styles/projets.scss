@@ -37,9 +37,12 @@
 
 				flex-direction: row;
 				flex: content;
-				gap: 2vw;
+				gap: calc(variables.$projet-cartes-gap-wide * 1vw);
 				transition: 0.5s ease-in-out;
-
+				@media screen and (max-width: 768px) {
+					gap: calc(variables.$projet-cartes-gap-mobile * 1vw);
+					height: calc(100% - 32px - variables.$header-size);
+				}
 				.carrousel {
 					display: flex;
 					flex-direction: row;
@@ -51,6 +54,9 @@
 			top: 50%;
 			position: absolute;
 			opacity: 60%;
+			@media screen and (max-width: 768px) {
+				top: calc(50% - 16px - variables.$header-size);
+			}
 			img {
 				height: 50px;
 				width: 50px;

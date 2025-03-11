@@ -18,6 +18,9 @@
 		flex-direction: column;
 		max-width: 50%;
 		margin: 0 auto;
+		@media screen and (max-width: 768px) {
+			max-width: 90%;
+		}
 
 		p {
 			text-align: center;
@@ -30,10 +33,13 @@
 		gap: 8%;
 		// padding-left: 25vw;
 		// padding-right: 25vw;
-		p {
-			max-width: 50%;
-			text-align: center;
+		@media screen and (max-width: 768px) {
+			// max-width: 90%;
 		}
+		// p {
+		// 	max-width: 50%;
+		// 	text-align: center;
+		// }
 		.categorie {
 			ul {
 				display: flex;
@@ -41,11 +47,21 @@
 				gap: 5px;
 				list-style-type: none;
 				padding: 0;
+				@media screen and (max-width: 768px) {
+					// max-width: 90%;
+					// flex-direction: column;
+					gap: 15px;
+				}
 				li {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
 					gap: 15px;
+					@media screen and (max-width: 768px) {
+						// max-width: 90%;
+						flex-direction: column;
+						gap: 5px;
+					}
 					h3 {
 						color: variables.$primary-color;
 					}

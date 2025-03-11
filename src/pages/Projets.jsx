@@ -5,8 +5,10 @@ import CarteProjet from '../components/CarteProjet/CarteProjet'
 import arrow from '../assets/left-arrow.svg'
 
 import '../styles/projets.scss'
+import variables from '../styles/utils/_variables.scss'
 
 function Projets(props) {
+	// console.log(variables.headerSize)
 	const [projetCentral, setProjetCentral] = useState(0)
 	const cardContainer = useRef()
 	const projectsList = useRef()
@@ -36,10 +38,19 @@ function Projets(props) {
 
 	useEffect(() => {
 		// ref.current.style.right = (30 + 2) * projetCentral + 'rem'
+		let cardSize = Number(
+			window.innerWidth >= 768
+				? variables.cardSizeWide
+				: variables.cardSizeMobile
+		)
+		let gapSize = Number(
+			window.innerWidth >= 768
+				? variables.cardGapWide
+				: variables.cardGapMobile
+		)
+
 		cardContainer.current.style.left =
-			// (25 + 2) * (listeProjets.length / 2) +
-			-12.5 - (25 + 2) * projetCentral + 'vw'
-		// console.log(projetCentral)
+			-(cardSize / 2) - (cardSize + gapSize) * projetCentral + 'vw'
 	}, [listeProjets.length, projetCentral])
 
 	return (

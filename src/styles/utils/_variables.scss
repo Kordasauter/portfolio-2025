@@ -8,4 +8,18 @@ $secondary-color: #0264d8;
 $common-radius: 20px;
 
 $header-size: 100px;
+// $headerSize: 100px;
 $footer-size: 200px;
+
+$card-size-wide: 25;
+$card-size-mobile: 60;
+
+$projet-cartes-gap-wide: 2;
+$projet-cartes-gap-mobile: 8;
+
+:export {
+	cardSizeWide: $card-size-wide;
+	cardSizeMobile: $card-size-mobile;
+	cardGapWide: $projet-cartes-gap-wide;
+	cardGapMobile: $projet-cartes-gap-mobile;
+}

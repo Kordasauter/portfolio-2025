@@ -3,7 +3,6 @@ import React from 'react'
 import '../../styles/carteProjet.scss'
 
 function CarteProjet(props) {
-	if (props.selected) console.log(props.imageURL)
 	return (
 		<div
 			className={

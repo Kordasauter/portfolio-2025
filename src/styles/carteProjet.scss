@@ -1,3 +1,4 @@
+@use './utils/variables';
 .selected {
 	transform: scale(1.1);
 	box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
@@ -10,10 +11,12 @@
 .carte {
 	background-color: lightgray;
 	border-radius: 15px;
-	width: calc(25vw);
+	width: calc(variables.$card-size-wide * 1vw);
 	height: fit-content;
 	transition: 0.5s ease-in-out;
-
+	@media screen and (max-width: 768px) {
+		width: calc(variables.$card-size-mobile * 1vw);
+	}
 	.image {
 		margin: 8px;
 		padding: 8px;
