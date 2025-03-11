@@ -10,7 +10,7 @@
 .carte {
 	background-color: lightgray;
 	border-radius: 15px;
-	width: calc(30rem);
+	width: calc(25vw);
 	height: fit-content;
 	transition: 0.5s ease-in-out;
 
@@ -30,6 +30,6 @@
 	}
 }
 
-.carteVide {
-	width: calc(30rem);
-}
+// .carteVide {
+// 	width: calc(30rem);
+// }

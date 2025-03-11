@@ -3,7 +3,7 @@
 #projetsSection {
 	@include mixins.section();
 
-	overflow: hidden;
+	// overflow: hidden;
 
 	min-height: calc(100vh - variables.$header-size);
 	box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -13,23 +13,37 @@
 		min-height: calc(100vh - (variables.$header-size + 35px));
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		// align-items: center;
 		height: 100%;
-		.cardContainer {
-			align-items: center;
-			height: 100%;
+		h2 {
+			text-align: center;
+		}
+		.projectsList {
+			// overflow: auto;
+			height: calc(100vh - (variables.$header-size + 35px));
+			// min-width: 100%;
+			width: fit-content;
+			// overflow: auto;
+			// left: 0;
+			padding-left: 50%;
+			.cardContainer {
+				align-items: center;
+				height: 100%;
 
-			position: relative;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: row;
-			flex: content;
-			gap: 2rem;
-			transition: 0.5s ease-in-out;
-
-			.carrousel {
+				position: relative;
+				// padding: 0 50%;
+				// left: 0;
 				display: flex;
+
 				flex-direction: row;
+				flex: content;
+				gap: 2vw;
+				transition: 0.5s ease-in-out;
+
+				.carrousel {
+					display: flex;
+					flex-direction: row;
+				}
 			}
 		}
 		.button {

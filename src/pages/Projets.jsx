@@ -8,7 +8,8 @@ import '../styles/projets.scss'
 
 function Projets(props) {
 	const [projetCentral, setProjetCentral] = useState(0)
-	const ref = useRef()
+	const cardContainer = useRef()
+	const projectsList = useRef()
 
 	const handleClickForward = () => {
 		if (projetCentral < listeProjets.length - 1)
@@ -18,11 +19,6 @@ function Projets(props) {
 	const handleClickBackward = () => {
 		if (projetCentral > 0) setProjetCentral(projetCentral - 1)
 	}
-
-	useEffect(() => {
-		ref.current.style.left = 45 - (30 + 2) * projetCentral + 'rem'
-		// console.log(projetCentral)
-	}, [projetCentral])
 
 	const texte =
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non	risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
@@ -38,28 +34,38 @@ function Projets(props) {
 		{ url: '8', texte: '8' + texte + '8' },
 	]
 
+	useEffect(() => {
+		// ref.current.style.right = (30 + 2) * projetCentral + 'rem'
+		cardContainer.current.style.left =
+			// (25 + 2) * (listeProjets.length / 2) +
+			-12.5 - (25 + 2) * projetCentral + 'vw'
+		// console.log(projetCentral)
+	}, [listeProjets.length, projetCentral])
+
 	return (
 		<section id='projetsSection' className='section'>
 			<div className='projets'>
 				<h2>Projets</h2>
+				<div className='projectsList' ref={projectsList}>
+					<div className='cardContainer' ref={cardContainer}>
+						{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
+						{listeProjets.map((projet, index) => (
+							<CarteProjet
+								imageURL={projet.url}
+								display={true}
+								texte={projet.texte}
+								selected={projetCentral === index}
+								key={'projet' + index}
+							/>
+						))}
+						{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
+					</div>
+				</div>
 				<div className='button btnLeft' onClick={handleClickBackward}>
 					<img src={arrow} alt='left arrow' />
 				</div>
 				<div className='button btnRight' onClick={handleClickForward}>
 					<img src={arrow} alt='left arrow' />
-				</div>
-				<div className='cardContainer' ref={ref}>
-					{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
-					{listeProjets.map((projet, index) => (
-						<CarteProjet
-							imageURL={projet.url}
-							display={true}
-							texte={projet.texte}
-							selected={projetCentral === index}
-							key={'projet' + index}
-						/>
-					))}
-					{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
 				</div>
 			</div>
 		</section>

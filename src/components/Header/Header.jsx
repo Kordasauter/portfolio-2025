@@ -10,7 +10,6 @@ function Header(props) {
 				<h2>MICKAEL VIVENS</h2>
 				<h2>DEVELOPPEUR WEB</h2>
 			</div>
-
 			<Nav />
 		</header>
 	)
