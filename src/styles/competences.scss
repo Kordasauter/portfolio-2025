@@ -26,9 +26,10 @@
 	.competences {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
-		padding-left: 25vw;
-		padding-right: 25vw;
+		justify-content: center;
+		gap: 8%;
+		// padding-left: 25vw;
+		// padding-right: 25vw;
 		p {
 			max-width: 50%;
 			text-align: center;

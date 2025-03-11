@@ -2,25 +2,35 @@
 @use 'utils/variables';
 header {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	position: fixed;
 	top: 0;
 	z-index: 4;
 	height: variables.$header-size;
 	width: 100%;
-
 	background-color: #d5e6ff;
 	@include mixins.shadowBox;
 
 	color: variables.$main-font-color;
 	background-color: #d5e6ff;
 	background-image: url('https://kordasauter.github.io/Kasa/static/media/homeBanner.7360a5225c491626c951.jpg');
+
+	flex-direction: row;
+	justify-content: space-between;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		justify-content: space-between;
+	}
 	.titre {
 		padding-left: 50px;
 		display: flex;
 		justify-content: space-around;
 		gap: 20px;
+		@media screen and (max-width: 768px) {
+			font-size: smaller;
+			padding-left: 0px;
+			padding-top: 10px;
+			gap: 0px;
+		}
 		h2 {
 			margin: auto 0;
 		}
