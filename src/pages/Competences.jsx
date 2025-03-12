@@ -45,7 +45,10 @@ export default Competences
 function createList(data, type) {
 	return data[type]?.map((c, index) => (
 		<li key={type + index}>
-			<img src={'./images/logos/' + c.name + '.png'} alt={c.name} />
+			<img
+				src={'./images/logos/' + c.name + '.png'}
+				alt={'logo ' + c.name}
+			/>
 			{c.name}
 		</li>
 	))

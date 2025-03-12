@@ -8,7 +8,7 @@ function Nav(props) {
 				<li>
 					<a
 						// className={pathname === '/' ? 'active' : 'notActive'}
-						className='notActive'
+						// className='notActive'
 						href='./#accueil'
 					>
 						Accueil
@@ -19,7 +19,7 @@ function Nav(props) {
 						// className={
 						// 	pathname === '/competences' ? 'active' : 'notActive'
 						// }
-						className='notActive'
+						// className='notActive'
 						href='./#competences'
 					>
 						Compétences
@@ -41,7 +41,7 @@ function Nav(props) {
 						// className={
 						// 	pathname === '/projets' ? 'active' : 'notActive'
 						// }
-						className='notActive'
+						// className='notActive'
 						href='./#projets'
 					>
 						Projets
@@ -52,7 +52,7 @@ function Nav(props) {
 						// className={
 						// 	pathname === '/contact' ? 'active' : 'notActive'
 						// }
-						className='notActive'
+						// className='notActive'
 						href='./#contact'
 					>
 						Contact

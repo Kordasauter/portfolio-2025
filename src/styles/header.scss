@@ -31,6 +31,9 @@ header {
 			padding-top: 10px;
 			gap: 0px;
 		}
+		.job {
+			color: variables.$primary-color;
+		}
 		h2 {
 			margin: auto 0;
 		}
@@ -49,13 +52,13 @@ header {
 
 		li {
 			a {
-				color: variables.$main-font-color;
-			}
-			.active {
-				text-decoration: underline;
-			}
-			.notActive {
+				color: variables.$primary-color;
 				text-decoration: none;
+			}
+			:hover {
+				// text-decoration: underline;
+				border-bottom: 2px solid variables.$primary-color;
+				// transition: border-bottom 0.1s;
 			}
 		}
 	}
