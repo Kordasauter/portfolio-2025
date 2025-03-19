@@ -12,14 +12,21 @@ function CarteProjet(props) {
 				// 	: 'carteVide ' + props.className
 			}
 		>
-			{props.display === true ? afficherImage(props.imageURL) : null}
-			{props.display === true ? afficherTexte(props.texte) : null}
+			{afficherImage(props.imageURL)}
+			{afficherTexte(props.texte)}
 		</div>
 	)
 }
 
 function afficherImage(imageURL) {
-	return <div className='image'>{imageURL}</div>
+	// return <div className='image'>{imageURL}</div>
+	return (
+		<img
+			className='image'
+			src={'./images/sites/' + imageURL + '.png'}
+			alt={'site ' + imageURL}
+		/>
+	)
 }
 
 function afficherTexte(texte) {

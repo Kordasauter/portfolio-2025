@@ -5,43 +5,46 @@
 
 	overflow: hidden;
 
-	min-height: calc(100vh - variables.$header-size);
+	// min-height: calc(100vh - variables.$header-size);
 	box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
 	background-color: #f2f2f2;
 	background-image: url('https://www.transparenttextures.com/patterns/transparent-square-tiles.png');
 	.projets {
-		min-height: calc(100vh - (variables.$header-size + 35px));
+		// min-height: calc(100vh - (variables.$header-size + 35px));
 		display: flex;
 		flex-direction: column;
 		// align-items: center;
-		height: 100%;
+		// height: 100%;
 		h2 {
 			text-align: center;
 		}
 		.projectsList {
-			// overflow: auto;
-			height: calc(100vh - (variables.$header-size + 35px));
-			// min-width: 100%;
-			width: fit-content;
-			// overflow: auto;
-			// left: 0;
+			flex: 1;
+			// width: fit-content;
+			display: flex;
 			padding-left: 50%;
 			.cardContainer {
+				padding-top: 12%;
+				padding-bottom: 25%;
+				// flex: 1;
 				align-items: center;
-				height: 100%;
+				height: calc(100% - 32px);
 
 				position: relative;
 				// padding: 0 50%;
 				// left: 0;
 				display: flex;
+				// display: grid;
+				// grid-template-rows: 1fr;
+				// grid-template-columns: repeat(10, 1fr);
 
-				flex-direction: row;
-				flex: content;
+				// flex-direction: row;
+				// flex: content;
 				gap: calc(variables.$projet-cartes-gap-wide * 1vw);
 				transition: 0.5s ease-in-out;
 				@media screen and (max-width: 768px) {
 					gap: calc(variables.$projet-cartes-gap-mobile * 1vw);
-					height: calc(100% - 32px - variables.$header-size);
+					// height: calc(100% - 32px - variables.$header-size);
 				}
 				.carrousel {
 					display: flex;
@@ -51,12 +54,13 @@
 		}
 		.button {
 			z-index: 1;
-			top: 50%;
+			top: calc(50% - variables.$header-size);
+			// top: 70%;
 			position: absolute;
 			opacity: 60%;
-			@media screen and (max-width: 768px) {
-				top: calc(50% - 16px - variables.$header-size);
-			}
+			// @media screen and (max-width: 768px) {
+			// 	top: calc(50% - variables.$header-size);
+			// }
 			img {
 				height: 50px;
 				width: 50px;

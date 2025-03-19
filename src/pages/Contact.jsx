@@ -36,7 +36,7 @@ function Contact(props) {
 				<form onSubmit={sendEmail} ref={form}>
 					<div className='nameMail'>
 						<div className='smallInput'>
-							<label for='from_name'>Nom</label>
+							<label htmlFor='from_name'>Nom</label>
 							<input
 								type='text'
 								name='from_name'
@@ -45,7 +45,7 @@ function Contact(props) {
 						</div>
 
 						<div className='smallInput'>
-							<label for='user_email'>E-mail</label>
+							<label htmlFor='user_email'>E-mail</label>
 							<input
 								type='email'
 								name='user_email'
@@ -54,7 +54,7 @@ function Contact(props) {
 						</div>
 					</div>
 					<div>
-						<label for='message'>Message</label>
+						<label htmlFor='message'>Message</label>
 						<textarea name='message' id='message' />
 					</div>
 					<input

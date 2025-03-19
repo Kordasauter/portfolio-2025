@@ -6,6 +6,7 @@ import arrow from '../assets/left-arrow.svg'
 
 import '../styles/projets.scss'
 import variables from '../styles/utils/_variables.scss'
+import projets from '../datas/projets.json'
 
 function Projets(props) {
 	// console.log(variables.headerSize)
@@ -22,22 +23,9 @@ function Projets(props) {
 		if (projetCentral > 0) setProjetCentral(projetCentral - 1)
 	}
 
-	const texte =
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non	risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
-
-	const listeProjets = [
-		{ url: '1', texte: '1' + texte + '1' },
-		{ url: '2', texte: '2' + texte + '2' },
-		{ url: '3', texte: '3' + texte + '3' },
-		{ url: '4', texte: '4' + texte + '4' },
-		{ url: '5', texte: '5' + texte + '5' },
-		{ url: '6', texte: '6' + texte + '6' },
-		{ url: '7', texte: '7' + texte + '7' },
-		{ url: '8', texte: '8' + texte + '8' },
-	]
+	const listeProjets = createListProjects(projets)
 
 	useEffect(() => {
-		// ref.current.style.right = (30 + 2) * projetCentral + 'rem'
 		let cardSize = Number(
 			window.innerWidth >= 768
 				? variables.cardSizeWide
@@ -59,17 +47,15 @@ function Projets(props) {
 				<h2>Projets</h2>
 				<div className='projectsList' ref={projectsList}>
 					<div className='cardContainer' ref={cardContainer}>
-						{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
 						{listeProjets.map((projet, index) => (
 							<CarteProjet
 								imageURL={projet.url}
-								display={true}
+								// display={true}
 								texte={projet.texte}
 								selected={projetCentral === index}
 								key={'projet' + index}
 							/>
 						))}
-						{/* <CarteProjet imageURL={''} display={false} texte={''} /> */}
 					</div>
 				</div>
 				<div className='button btnLeft' onClick={handleClickBackward}>
@@ -84,3 +70,15 @@ function Projets(props) {
 }
 
 export default Projets
+
+function createListProjects(projets) {
+	let listeProjets = []
+	projets.map((projet) =>
+		listeProjets.push({
+			titre: projet.Title,
+			url: projet.Title,
+			texte: projet.Description,
+		})
+	)
+	return listeProjets
+}
