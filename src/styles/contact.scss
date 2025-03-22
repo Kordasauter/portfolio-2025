@@ -43,6 +43,7 @@
 	// padding-top: 25px;
 	// padding-bottom: 35px;
 	padding-bottom: 0;
+	margin-bottom: 0;
 
 	input[type='text'],
 	input[type='email'],
@@ -106,13 +107,13 @@
 	.placeHolder {
 		height: variables.$footer-size;
 	}
-}
-.invisible {
-	display: none;
-}
-.success {
-	color: green;
-}
-.fail {
-	color: red;
+	.invisible {
+		display: none;
+	}
+	.success {
+		color: green;
+	}
+	.fail {
+		color: red;
+	}
 }

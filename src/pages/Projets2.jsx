@@ -1,4 +1,4 @@
-import React, { /*useEffect,*/ useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // import CarteProjet from '../components/CarteProjet/CarteProjet'
 
@@ -6,7 +6,7 @@ import leftArrow from '../assets/left-arrow.svg'
 import rightArrow from '../assets/right-arrow.svg'
 
 import '../styles/projets2.scss'
-// import variables from '../styles/utils/_variables.scss'
+import variables from '../styles/utils/_variables.scss'
 import projets from '../datas/projets.json'
 
 function Projets2(props) {
@@ -16,12 +16,12 @@ function Projets2(props) {
 	// const cardContainer = useRef()
 	const projectsList = useRef()
 
-	const handleClickForward = () => {
-		if (projetCentral < listeProjets.length - 1)
+	const handleClickForward2 = () => {
+		if (projetCentral < listeProjets.length - 5)
 			setProjetCentral(projetCentral + 1)
 	}
 
-	const handleClickBackward = () => {
+	const handleClickBackward2 = () => {
 		if (projetCentral > 0) setProjetCentral(projetCentral - 1)
 	}
 
@@ -31,73 +31,88 @@ function Projets2(props) {
 
 	const listeProjets = createListProjects(projets)
 
-	// useEffect(() => {
-	// 	let cardSize = Number(
-	// 		window.innerWidth >= 768
-	// 			? variables.cardSizeWide
-	// 			: variables.cardSizeMobile
-	// 	)
-	// 	let gapSize = Number(
-	// 		window.innerWidth >= 768
-	// 			? variables.cardGapWide
-	// 			: variables.cardGapMobile
-	// 	)
-
-	// 	cardContainer.current.style.left =
-	// 		-(cardSize / 2) - (cardSize + gapSize) * projetCentral + 'vw'
-	// }, [listeProjets.length, projetCentral])
+	useEffect(() => {
+		projectsList.current.style.left = -20 * projetCentral + '%'
+	}, [listeProjets.length, projetCentral])
 	return (
 		<section id='projetsSection2' className='section'>
 			<div className='projets'>
 				<h2>Projets</h2>
 
-				<div className='projectsContainer' ref={projectsList}>
+				<div className='projectsContainer'>
 					<div className='projectsWindow'>
 						<div className='projectSelection'>
 							<div
 								className='button2 btnLeft2'
-								onClick={handleClickBackward}
+								onClick={handleClickBackward2}
 							>
-								<img src={leftArrow} alt='left arrow' />
+								<img
+									src={leftArrow}
+									className={
+										listeProjets.length > 5
+											? ''
+											: 'invisible'
+									}
+									alt='left arrow'
+								/>
+							</div>
+							<div className='projectListContainer'>
+								<div className='projectList' ref={projectsList}>
+									{listeProjets.map((projet, index) => (
+										<div
+											className={
+												index === currentProject
+													? 'imageProject current'
+													: 'imageProject'
+											}
+											onClick={() => displayInfo(index)}
+											key={
+												'imgProjet' +
+												projet?.url +
+												index
+											}
+										>
+											{afficherImage(projet)}
+											<div className='projectName'>
+												{projet.url}
+											</div>
+										</div>
+									))}
+								</div>
 							</div>
 
-							<div className='projectList'>
-								{listeProjets.map((projet, index) => (
-									<div
-										className={
-											index === currentProject
-												? 'imageProject current'
-												: 'imageProject'
-										}
-										onClick={() => displayInfo(index)}
-										key={'imgProjet' + projet?.url}
-									>
-										{afficherImage(projet)}
-									</div>
-								))}
-							</div>
 							<div
 								className='button2 btnRight2'
-								onClick={handleClickForward}
+								onClick={handleClickForward2}
 							>
-								<img src={rightArrow} alt='right arrow' />
+								<img
+									src={rightArrow}
+									className={
+										listeProjets.length > 5
+											? ''
+											: 'invisible'
+									}
+									alt='right arrow'
+								/>
 							</div>
 						</div>
 
 						<div className='projectDisplay'>
-							<div className='photo'>
-								<img
-									src={
-										'./images/sites/' +
-										listeProjets[currentProject]?.url +
-										'.png'
-									}
-									alt={
-										'./images/sites/' +
-										listeProjets[currentProject]?.url +
-										'.png'
-									}
-								/>
+							<div className='photoContainer'>
+								<div className='photo'>
+									<img
+										src={
+											'./images/sites/' +
+											listeProjets[currentProject]?.url +
+											'.png'
+										}
+										alt={
+											'./images/sites/' +
+											listeProjets[currentProject]?.url +
+											'.png'
+										}
+									/>
+								</div>
 							</div>
 							<div className='competences'>
 								{listeProjets[currentProject]?.techno.map(
@@ -106,7 +121,15 @@ function Projets2(props) {
 											className='techno'
 											key={'techno ' + tech}
 										>
-											{tech}
+											<img
+												src={
+													'./images/logos/' +
+													tech +
+													'.png'
+												}
+												alt={'logo ' + tech}
+											/>
+											<div>{tech}</div>
 										</div>
 									)
 								)}
@@ -147,9 +170,11 @@ function createListProjects(projets) {
 
 function afficherImage(projet) {
 	return (
-		<img
-			src={'./images/sites/' + projet?.url + '.png'}
-			alt={'site ' + projet.url}
-		/>
+		<div className='projectMiniature'>
+			<img
+				src={'./images/sites/' + projet?.url + '.png'}
+				alt={'site ' + projet.url}
+			/>
+		</div>
 	)
 }
