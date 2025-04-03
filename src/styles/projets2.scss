@@ -206,8 +206,10 @@
 						// border: 1px solid red;
 						display: flex;
 						flex-direction: row;
+						flex-wrap: wrap;
+						// grid-template-rows: repeat(auto-fill, fit-content);
 						gap: 15px;
-						justify-content: center;
+						// justify-content: center;
 						padding: 20px;
 						.techno {
 							display: flex;

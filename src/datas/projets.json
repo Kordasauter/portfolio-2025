@@ -55,29 +55,5 @@
 			"Mon role à été de créer le back end du site internet, y compris la base de donnée (MongoDB)."
 		],
 		"Technologies": ["Javascript", "NodeJS", "MongoDB"]
-	},
-	{
-		"id": 4,
-		"Title": "MonVieuxGrimoire",
-		"URL": "https://kordasauter.github.io/P7-Dev-Web-livres/",
-		"Type": "Projet de formation",
-		"Description": [
-			"Mon Vieux Grimoire a fait appel à mes services pour développer le back end de son site internet.",
-			"Le front end à été développé par un autre développeur.",
-			"Mon role à été de créer le back end du site internet, y compris la base de donnée (MongoDB)."
-		],
-		"Technologies": ["Javascript", "NodeJS", "MongoDB"]
-	},
-	{
-		"id": 4,
-		"Title": "MonVieuxGrimoire",
-		"URL": "https://kordasauter.github.io/P7-Dev-Web-livres/",
-		"Type": "Projet de formation",
-		"Description": [
-			"Mon Vieux Grimoire a fait appel à mes services pour développer le back end de son site internet.",
-			"Le front end à été développé par un autre développeur.",
-			"Mon role à été de créer le back end du site internet, y compris la base de donnée (MongoDB)."
-		],
-		"Technologies": ["Javascript", "NodeJS", "MongoDB"]
 	}
 ]

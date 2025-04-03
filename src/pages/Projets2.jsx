@@ -68,13 +68,13 @@ function Projets2(props) {
 											onClick={() => displayInfo(index)}
 											key={
 												'imgProjet' +
-												projet?.url +
+												projet?.titre +
 												index
 											}
 										>
 											{afficherImage(projet)}
 											<div className='projectName'>
-												{projet.url}
+												{projet.titre}
 											</div>
 										</div>
 									))}
@@ -103,12 +103,14 @@ function Projets2(props) {
 									<img
 										src={
 											'./images/sites/' +
-											listeProjets[currentProject]?.url +
+											listeProjets[currentProject]
+												?.titre +
 											'.png'
 										}
 										alt={
 											'./images/sites/' +
-											listeProjets[currentProject]?.url +
+											listeProjets[currentProject]
+												?.titre +
 											'.png'
 										}
 									/>
@@ -143,6 +145,16 @@ function Projets2(props) {
 								<p className='text'>
 									{listeProjets[currentProject]?.texte}
 								</p>
+								<p className='title'>Lien vers le projet : </p>
+								<p className='text'>
+									<a
+										href={listeProjets[currentProject]?.url}
+										target='_blank'
+										rel='noreferrer'
+									>
+										{listeProjets[currentProject]?.url}
+									</a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -159,7 +171,7 @@ function createListProjects(projets) {
 	projets.map((projet) =>
 		listeProjets.push({
 			titre: projet.Title,
-			url: projet.Title,
+			url: projet.URL,
 			texte: projet.Description,
 			techno: projet.Technologies,
 			type: projet.Type,
@@ -172,8 +184,8 @@ function afficherImage(projet) {
 	return (
 		<div className='projectMiniature'>
 			<img
-				src={'./images/sites/' + projet?.url + '.png'}
-				alt={'site ' + projet.url}
+				src={'./images/sites/' + projet?.titre + '.png'}
+				alt={'site ' + projet.titre}
 			/>
 		</div>
 	)
