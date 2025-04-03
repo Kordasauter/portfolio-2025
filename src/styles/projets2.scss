@@ -229,6 +229,7 @@
 					}
 					.description {
 						// border-left: 1px gray solid;
+						overflow: auto;
 						background-color: lightgray;
 						border-radius: 5px;
 						grid-area: description;
