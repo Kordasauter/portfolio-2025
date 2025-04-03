@@ -9,15 +9,20 @@ function Accueil(props) {
 				<div className='description'>
 					<h1>développeur web</h1>
 					<p>
-						J'ai toujours développé pour le plaisir, mais après près
-						de 8 ans dans l'administration système et réseau, j'ai
-						eu l'opportunité de me spécialiser dans le développement
-						web. C'est pourquoi j'ai suivi une formation qui m'a
-						permis de parfaire toutes les compétences nécessaires à
-						ce type de poste.
+						Développeur web passionné, j’ai évolué du C++ au
+						scripting avant de me spécialiser en développement web.
+						Curieux et motivé, j’aime apprendre et relever de
+						nouveaux défis techniques.
 					</p>
 				</div>
-				<div className='cvBouton'>Téléchargez mon CV</div>
+				<div className='cvBouton'>
+					<a
+						href='./CV/Développeur_Web_Fullstack-Mickael_Vivens.pdf'
+						download='Développeur Web Fullstack-Mickael Vivens'
+					>
+						Téléchargez mon CV
+					</a>
+				</div>
 			</div>
 		</section>
 	)

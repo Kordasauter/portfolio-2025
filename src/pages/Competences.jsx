@@ -10,13 +10,15 @@ function Competences(props) {
 			<div>
 				<div className='description'>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Sed non risus. Suspendisse lectus tortor, dignissim sit
-						amet, adipiscing nec, ultricies sed, dolor. Cras
-						elementum ultrices diam. Maecenas ligula massa, varius
-						a, semper congue, euismod non, mi. Proin porttitor, orci
-						nec nonummy molestie, enim est eleifend mi, non
-						fermentum diam nisl sit amet erat
+						Grâce à mon parcours en administration réseau et à ma
+						formation en développement web, j’ai acquis des
+						compétences solides en <b>JavaScript</b>, <b>PHP</b>,{' '}
+						<b>TypeScript</b>, <b>SQL</b>, <b>NoSQL</b> et en
+						frameworks comme <b>React</b>, <b>Angular</b> et{' '}
+						<b>NodeJS</b>. Je maîtrise également les <b>API REST</b>
+						, <b>GIT</b> et les méthodologies <b>agiles</b>. Ma
+						polyvalence et ma capacité d’adaptation me permettent de
+						concevoir des applications performantes et optimisées.
 					</p>
 				</div>
 
