@@ -33,7 +33,6 @@ function afficherImage(imageURL) {
 
 function afficherTexte(texte) {
 	// return <div className='descTexte'>{texte}</div>
-	console.log(texte)
 	return (
 		<div className='descTexte'>
 			<p className='title'>Type de projet : </p>

@@ -8,7 +8,6 @@ function Contact(props) {
 	//send e mail
 	const sendEmail = (e) => {
 		e.preventDefault()
-		console.log(form)
 		emailjs
 			.sendForm('service_9intz6x', 'template_etlfva5', form.current, {
 				publicKey: '22blyaDc5w6TQyX7i',
