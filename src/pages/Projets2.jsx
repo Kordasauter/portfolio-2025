@@ -116,7 +116,8 @@ function Projets2(props) {
 									/>
 								</div>
 							</div>
-							<div className='competences'>
+							{afficherCompetences(listeProjets[currentProject])}
+							{/* <div className='competences'>
 								{listeProjets[currentProject]?.techno.map(
 									(tech) => (
 										<div
@@ -135,7 +136,7 @@ function Projets2(props) {
 										</div>
 									)
 								)}
-							</div>
+							</div> */}
 							<div className='description'>
 								<p className='title'>Type de projet : </p>
 								<p className='text'>
@@ -152,7 +153,7 @@ function Projets2(props) {
 										target='_blank'
 										rel='noreferrer'
 									>
-										{listeProjets[currentProject]?.url}
+										{listeProjets[currentProject]?.titre}
 									</a>
 								</p>
 							</div>
@@ -187,6 +188,21 @@ function afficherImage(projet) {
 				src={'./images/sites/' + projet?.titre + '.png'}
 				alt={'site ' + projet.titre}
 			/>
+		</div>
+	)
+}
+function afficherCompetences(projet) {
+	return (
+		<div className='competences'>
+			{projet?.techno.map((tech) => (
+				<div className='techno' key={'techno ' + tech}>
+					<img
+						src={'./images/logos/' + tech + '.png'}
+						alt={'logo ' + tech}
+					/>
+					<div>{tech}</div>
+				</div>
+			))}
 		</div>
 	)
 }

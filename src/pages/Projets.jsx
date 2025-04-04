@@ -26,19 +26,18 @@ function Projets(props) {
 	const listeProjets = createListProjects(projets)
 
 	useEffect(() => {
-		let cardSize = Number(
-			window.innerWidth >= 768
-				? variables.cardSizeWide
-				: variables.cardSizeMobile
-		)
-		let gapSize = Number(
-			window.innerWidth >= 768
-				? variables.cardGapWide
-				: variables.cardGapMobile
-		)
-
-		cardContainer.current.style.left =
-			-(cardSize / 2) - (cardSize + gapSize) * projetCentral + 'vw'
+		// let cardSize = Number(
+		// 	window.innerWidth >= 768
+		// 		? variables.cardSizeWide
+		// 		: variables.cardSizeMobile
+		// )
+		// let gapSize = Number(
+		// 	window.innerWidth >= 768
+		// 		? variables.cardGapWide
+		// 		: variables.cardGapMobile
+		// )
+		// cardContainer.current.style.left =
+		// 	-(cardSize / 2) - (cardSize + gapSize) * projetCentral + 'vw'
 	}, [listeProjets.length, projetCentral])
 
 	return (
@@ -49,9 +48,7 @@ function Projets(props) {
 					<div className='cardContainer' ref={cardContainer}>
 						{listeProjets.map((projet, index) => (
 							<CarteProjet
-								imageURL={projet.url}
-								// display={true}
-								texte={projet.texte}
+								projet={projet}
 								selected={projetCentral === index}
 								key={'projet' + index}
 							/>
@@ -76,8 +73,10 @@ function createListProjects(projets) {
 	projets.map((projet) =>
 		listeProjets.push({
 			titre: projet.Title,
-			url: projet.Title,
+			url: projet.URL,
 			texte: projet.Description,
+			techno: projet.Technologies,
+			type: projet.Type,
 		})
 	)
 	return listeProjets

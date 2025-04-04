@@ -10,3 +10,12 @@
 	//espace après la section pour un scroll plus fluide
 	margin-bottom: 100px;
 }
+
+@mixin descript() {
+	.title {
+		font-weight: bold;
+	}
+	.text {
+		padding-left: 20px;
+	}
+}

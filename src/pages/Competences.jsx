@@ -10,10 +10,9 @@ function Competences(props) {
 			<div>
 				<div className='description'>
 					<p>
-						Grâce à mon parcours en administration réseau et à ma
-						formation en développement web, j’ai acquis des
-						compétences solides en <b>JavaScript</b>, <b>PHP</b>,{' '}
-						<b>TypeScript</b>, <b>SQL</b>, <b>NoSQL</b> et en
+						Grâce à ma formation en développement web, j’ai acquis
+						des compétences solides en <b>JavaScript</b>, <b>PHP</b>
+						, <b>TypeScript</b>, <b>SQL</b>, <b>NoSQL</b> et en
 						frameworks comme <b>React</b>, <b>Angular</b> et{' '}
 						<b>NodeJS</b>. Je maîtrise également les <b>API REST</b>
 						, <b>GIT</b> et les méthodologies <b>agiles</b>. Ma
@@ -23,18 +22,18 @@ function Competences(props) {
 				</div>
 
 				<div className='competences'>
-					<div className='categorie'>
-						<h3 className='frontEnd'>Front End</h3>
-						<ul>{createList(comp, 'front')}</ul>
-					</div>
-					<div className='categorie'>
-						<h3 className='backEnd'>Back End</h3>
-						<ul>{createList(comp, 'back')}</ul>
-					</div>
-					<div className='categorie'>
-						<h3 className='bdd'>Base De Données</h3>
-						<ul>{createList(comp, 'bdd')}</ul>
-					</div>
+					{/* <div className='categorie'> */}
+					<h3 className='frontEnd'>Front End</h3>
+					<ul className='frontEnd'>{createList(comp, 'front')}</ul>
+					{/* </div> */}
+					{/* <div className='categorie'> */}
+					<h3 className='backEnd'>Back End</h3>
+					<ul className='backEnd'>{createList(comp, 'back')}</ul>
+					{/* </div> */}
+					{/* <div className='categorie'> */}
+					<h3 className='gestion'>Gestion de projets</h3>
+					<ul className='gestion'>{createList(comp, 'gestion')}</ul>
+					{/* </div> */}
 				</div>
 			</div>
 			<div className='placeHolder' />
@@ -48,8 +47,8 @@ function createList(data, type) {
 	return data[type]?.map((c, index) => (
 		<li key={type + index}>
 			<img
-				src={'./images/logos/' + c.name + '.png'}
-				alt={'logo ' + c.name}
+				src={'./images/logos/' + c.image + '.png'}
+				alt={'logo ' + c.image}
 			/>
 			{c.name}
 		</li>

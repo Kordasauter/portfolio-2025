@@ -1,7 +1,9 @@
+@use './utils/mixins';
 @use './utils/variables';
 .selected {
-	transform: scale(1.1);
-	box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+	// transform: scale(1.1);
+	// box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .notSelected {
@@ -15,7 +17,11 @@
 	border-radius: 15px;
 	width: calc(variables.$card-size-wide * 1vw);
 	// max-height: fit-content;
-	height: 100%;
+	// height: 100%;
+	height: calc(100vh - variables.$header-size - 150px);
+	@media screen and (max-height: 700px) {
+		font-size: 0.75rem;
+	}
 
 	transition: 0.5s ease-in-out;
 	@media screen and (max-width: 768px) {
@@ -42,6 +48,40 @@
 		padding: 8px;
 		border-radius: 7px;
 		background-color: white;
-		overflow: auto;
+		// overflow: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+		white-space: wrap;
+		@include mixins.descript();
+	}
+	.competences {
+		margin: 8px;
+		margin-top: 0px;
+		// padding: 8px;
+		padding-bottom: 2px;
+		grid-area: competences;
+		// border: 1px solid red;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		// grid-template-rows: repeat(auto-fill, fit-content);
+		gap: 15px;
+		// justify-content: center;
+		// padding: 0 20px 20px 0;
+		.techno {
+			display: flex;
+			flex-direction: row;
+			gap: 5px;
+
+			// margin: 5px;
+			padding: 5px;
+			border-radius: 5px;
+			width: fit-content;
+			height: fit-content;
+			background-color: white; //
+			img {
+				height: 20px;
+			}
+		}
 	}
 }

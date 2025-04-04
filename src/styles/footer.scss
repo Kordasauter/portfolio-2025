@@ -1,8 +1,10 @@
+@use 'utils/mixins';
+@use 'utils/variables';
 footer {
 	position: sticky;
-	top: calc(100vh - 200px);
+	top: calc(100vh - variables.$footer-size);
 	#footer {
-		height: 200px;
+		height: variables.$footer-size;
 		width: 100%;
 		color: white;
 		background-color: black;

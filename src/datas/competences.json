@@ -23,6 +23,10 @@
 		{
 			"name": "Angular",
 			"image": "Angular"
+		},
+		{
+			"name": "Sass",
+			"image": "Sass"
 		}
 	],
 	"back": [
@@ -31,16 +35,42 @@
 			"image": "NodeJS"
 		},
 		{
-			"name": "PHP",
-			"image": "PHP"
+			"name": "ExpressJS",
+			"image": "Express"
 		},
 		{
 			"name": "MongoDB",
 			"image": "MongoDB"
 		},
 		{
+			"name": "PHP",
+			"image": "PHP"
+		},
+		{
 			"name": "SQL",
 			"image": "SQL"
+		}
+	],
+	"gestion": [
+		{
+			"name": "Git",
+			"image": "Git"
+		},
+		{
+			"name": "GitHub",
+			"image": "GitHub"
+		},
+		{
+			"name": "Azure",
+			"image": "Azure"
+		},
+		{
+			"name": "Vercel",
+			"image": "Vercel"
+		},
+		{
+			"name": "Notion",
+			"image": "Notion"
 		}
 	]
 }
