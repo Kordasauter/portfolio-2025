@@ -1,50 +1,19 @@
 @use 'utils/mixins';
 @use 'utils/variables';
-// #contactSection {
-// 	@include mixins.section();
-// 	background-color: #f6f6f6;
-// 	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
-// 	.contact {
-// 		height: 100%;
-// 		display: flex;
-// 		flex-direction: column;
-// 		align-items: center;
-// 		justify-content: space-between;
-// 		.contactForm {
-// 			width: 30%;
-// 			padding-top: 20px;
-// 			padding-bottom: 20px;
-// 			border: 2px solid variables.$primary-color;
-// 			border-radius: 25px;
-// 			display: flex;
-// 			flex-direction: column;
-// 			align-items: center;
-// 		}
-// 	}
-// }
 
 #contactSection {
 	@include mixins.section();
-	height: 100%;
-	width: 100%;
-	// z-index: 10;
+	min-height: calc(100vh - variables.$header-size);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	// justify-content: space-around;
 	justify-content: space-between;
 	gap: 20px;
-
-	// background-image: url('https://www.transparenttextures.com/patterns/clean-textile.png');
 	background-color: #f6f6f6;
-	background-image: url('https://www.transparenttextures.com/patterns/stitched-wool.png');
+	background-image: url('../assets/backgrounds/stitched-wool.png');
 	box-shadow: lightgray 4px 4px 20px;
-
-	// padding-top: 25px;
-	// padding-bottom: 35px;
-	padding-bottom: 0;
-	margin-bottom: 0;
-
+	//supprime le margin de la mixin
+	margin-bottom: 0px;
 	input[type='text'],
 	input[type='email'],
 	textarea,
@@ -58,7 +27,6 @@
 		box-sizing: border-box;
 	}
 	h2 {
-		// font-size: 34px;
 		font-weight: bold;
 		color: variables.$primary-color;
 		text-align: center;

@@ -2,21 +2,6 @@
 @use 'utils/variables';
 main {
 	color: variables.$main-font-color;
-	margin-top: variables.$header-size;
-	// .section {
-	// 	position: sticky;
-	// 	top: variables.$header-size;
-	// 	// bottom: -100%;
-	// 	min-height: calc(100vh - variables.$header-size);
-	// 	// height: fit-content;
-	// 	box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
-	// }
-	// .lastSection {
-	// 	position: sticky;
-	// 	top: variables.$header-size;
-	// 	height: calc(100vh - (variables.$header-size + variables.$footer-size));
-	// 	box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
-	// }
 	h1,
 	h2 {
 		color: variables.$primary-color;
@@ -28,6 +13,3 @@ main {
 	top: -100px;
 	visibility: hidden;
 }
-// * {
-// 	border: 1px solid red;
-// }

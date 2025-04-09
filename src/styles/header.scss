@@ -9,11 +9,8 @@ header {
 	width: 100%;
 	background-color: #d5e6ff;
 	@include mixins.shadowBox;
-
 	color: variables.$main-font-color;
 	background-color: #d5e6ff;
-	background-image: url('https://kordasauter.github.io/Kasa/static/media/homeBanner.7360a5225c491626c951.jpg');
-
 	flex-direction: row;
 	justify-content: space-between;
 	@media screen and (max-width: 768px) {
@@ -56,9 +53,7 @@ header {
 				text-decoration: none;
 			}
 			:hover {
-				// text-decoration: underline;
 				border-bottom: 2px solid variables.$primary-color;
-				// transition: border-bottom 0.1s;
 			}
 		}
 	}

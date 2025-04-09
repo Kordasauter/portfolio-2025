@@ -30,7 +30,7 @@ function Contact(props) {
 	useEffect(() => {}, [success, fail])
 	return (
 		<section id='contactSection' ref={contact} className='lastSection'>
-			<h2>CONTACT</h2>
+			<h2>Contact</h2>
 			<div className='contact'>
 				<form onSubmit={sendEmail} ref={form}>
 					<div className='nameMail'>

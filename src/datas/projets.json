@@ -42,7 +42,7 @@
 			"Kasa, une entreprise de location d’appartements, a fait appel à mes services pour une refonte de son site internet.",
 			"Mon role a été de créer le front end du site internet et son routage en React."
 		],
-		"Technologies": ["HTML5", "CSS3", "Javascript", "ReactJS"]
+		"Technologies": ["HTML5", "CSS3", "SASS", "Javascript", "ReactJS"]
 	},
 	{
 		"id": 4,

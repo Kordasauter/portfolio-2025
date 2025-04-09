@@ -7,7 +7,7 @@ function Competences(props) {
 	return (
 		<section id='competencesSection' className='section'>
 			<h2>Compétences</h2>
-			<div>
+			<div className='blockDesciptionCompetences'>
 				<div className='description'>
 					<p>
 						Grâce à ma formation en développement web, j’ai acquis
@@ -18,25 +18,23 @@ function Competences(props) {
 						, <b>GIT</b> et les méthodologies <b>agiles</b>. Ma
 						polyvalence et ma capacité d’adaptation me permettent de
 						concevoir des applications performantes et optimisées.
+						Mais surtout, j’attache une grande importance à l’écoute
+						des besoins : comprendre les enjeux, dialoguer avec les
+						clients ou les équipes, et proposer des solutions
+						techniques pertinentes fait pleinement partie de ma
+						démarche.
 					</p>
 				</div>
 
 				<div className='competences'>
-					{/* <div className='categorie'> */}
 					<h3 className='frontEnd'>Front End</h3>
 					<ul className='frontEnd'>{createList(comp, 'front')}</ul>
-					{/* </div> */}
-					{/* <div className='categorie'> */}
 					<h3 className='backEnd'>Back End</h3>
 					<ul className='backEnd'>{createList(comp, 'back')}</ul>
-					{/* </div> */}
-					{/* <div className='categorie'> */}
 					<h3 className='gestion'>Gestion de projets</h3>
 					<ul className='gestion'>{createList(comp, 'gestion')}</ul>
-					{/* </div> */}
 				</div>
 			</div>
-			<div className='placeHolder' />
 		</section>
 	)
 }

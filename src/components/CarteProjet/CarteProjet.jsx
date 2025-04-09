@@ -4,16 +4,8 @@ import '../../styles/carteProjet.scss'
 
 function CarteProjet(props) {
 	return (
-		<div
-			className={
-				'carte ' + (props.selected ? 'selected' : 'notSelected')
-				// props.display
-				// 	? 'carte ' + props.className
-				// 	: 'carteVide ' + props.className
-			}
-		>
+		<div className={'carte '}>
 			{afficherImage(props.projet.titre)}
-			{/* {afficherTexte(props.texte)} */}
 			{afficherTexte(props.projet)}
 			{afficherCompetences(props.projet)}
 		</div>
@@ -21,7 +13,6 @@ function CarteProjet(props) {
 }
 
 function afficherImage(imageURL) {
-	// return <div className='image'>{imageURL}</div>
 	return (
 		<img
 			className='image'
@@ -32,7 +23,6 @@ function afficherImage(imageURL) {
 }
 
 function afficherTexte(texte) {
-	// return <div className='descTexte'>{texte}</div>
 	return (
 		<div className='descTexte'>
 			<p className='title'>Type de projet : </p>

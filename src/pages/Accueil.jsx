@@ -8,6 +8,10 @@ function Accueil(props) {
 			<div className='accueil'>
 				<div className='description'>
 					<h1>développeur web</h1>
+					<h2>
+						Ouvert à de nouvelles opportunités / en recherche
+						d'alternance
+					</h2>
 					<p>
 						Développeur web passionné, j’ai évolué du C++ au
 						scripting avant de me spécialiser en développement web.

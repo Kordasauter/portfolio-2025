@@ -1,14 +1,8 @@
 #experiences {
 	position: relative;
 	z-index: 1;
-	// padding-top: 50px;
 	background-color: #f2f2f2;
-	background-image: url('https://www.transparenttextures.com/patterns/transparent-square-tiles.png');
-	// h2 {
-	// 	margin: 0;
-	// 	padding-top: 0.83em;
-	// 	padding-bottom: 0.83em;
-	// }
+	background-image: url('../assets/backgrounds/transparent-square-tiles.png');
 	.experiences {
 		display: flex;
 		flex-direction: row;
